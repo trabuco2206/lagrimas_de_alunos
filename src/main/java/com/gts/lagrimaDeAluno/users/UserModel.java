@@ -1,4 +1,4 @@
-package com.gts.lagrimaDeAluno.Users;
+package com.gts.lagrimaDeAluno.users;
 
 import jakarta.persistence.*;
 import org.springframework.security.core.GrantedAuthority;
@@ -40,11 +40,14 @@ public class UserModel implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return List.of();
+        if (this.role == UserRole.ADMIN) return List.of(new SimpleGrantedAuthority("ROLE_ADMIN"),
+        new SimpleGrantedAuthority("ROLE_USER"));
+        else return List.of(new SimpleGrantedAuthority("ROLE_USER"));
+
     }
 
     public String getPassword() {
-        return "g4bri5ltr4buco";
+        return password;
     }
 
     @Override

@@ -1,4 +1,4 @@
-package com.gts.lagrimaDeAluno.Users;
+package com.gts.lagrimaDeAluno.users;
 
 public enum UserRole {
 
