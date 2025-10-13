@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 import java.util.List;
 
 @Entity
-@Table
+@Table(name = "TBL_MODEL")
 public class OrderModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

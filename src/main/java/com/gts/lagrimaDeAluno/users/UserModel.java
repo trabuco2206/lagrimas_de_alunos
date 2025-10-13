@@ -8,13 +8,13 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.Collection;
 import java.util.List;
 
-@Table(name = "user")
-@Entity(name = "user")
+@Table(name = "TBL_USER")
+@Entity
 public class UserModel implements UserDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
     private String login;
     private String password;
     private UserRole role;
