@@ -1,4 +1,8 @@
 package com.gts.lagrimaDeAluno.Users;
 
-public class UserRole {
+public enum UserRole {
+
+    ADMIN,
+    USER;
+
 }

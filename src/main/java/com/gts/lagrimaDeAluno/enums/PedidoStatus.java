@@ -4,5 +4,6 @@ public enum PedidoStatus {
 
     AGUARDANDO,
     EM_ANDAMENTO,
-    PRONTO
+    PRONTO;
+
 }
