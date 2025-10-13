@@ -1,6 +1,9 @@
 package com.gts.lagrimaDeAluno.models;
 
+import com.gts.lagrimaDeAluno.enums.PedidoStatus;
 import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 @Table
@@ -10,6 +13,9 @@ public class OrderModel {
     private Long id;
     private String nome;
     private String endereco;
+
+    @OneToMany
+    private List<PedidoModel> pedidos;
 
     public OrderModel() {
     }

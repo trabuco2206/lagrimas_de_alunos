@@ -1,5 +1,6 @@
 package com.gts.lagrimaDeAluno.models;
 
+import com.gts.lagrimaDeAluno.enums.PedidoStatus;
 import jakarta.persistence.*;
 
 @Entity
@@ -10,6 +11,8 @@ public class PedidoModel {
     private Long id;
     private String nome;
     private String preco;
+
+    private PedidoStatus PedidoStatus;
 
     public PedidoModel() {
     }
